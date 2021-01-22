@@ -14,3 +14,7 @@ Build a chatbot app that does the following.
 
 your_chatbot_name = '.....'
 print("Hello my name is ")
+#the chat bot program should ask the user how many friends are splitting the bill
+#the chat bot program should then ask the total bill
+#the chat bot program should split the bill and say that 
+print(" ........")
