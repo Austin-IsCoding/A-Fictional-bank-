@@ -78,22 +78,28 @@ class Bank:
   accounts = [] # the list 
   def __init__(self,name):
     self.name = name
-    print("Some message to welcome users")
+    print("---------Fictional Bank Welcomes You---------")
 
   def create_new_account(self):    
     typeOfAcc = input("What Type Of Account Are You Making S/C: ")
     name = input("What Will Be The Name Of The Account: ")
     balance = float(input("What Will Be The Balance Of The Account: "))
     number = int(input("What Will Be The Number Of Your Account: "))
-    account = Account(typeOfAcc,name,balance,number)
-    self.accounts.append(account)
+    loop = True
+    while loop:
+      find_account = self.find_account(accountNumber)
+      if find_account != None:
+        account = Account(typeOfAcc,name,balance,number)
+        
+         
+        
+      
 
   def modify_an_account(self):
     # Logic to modify account information
     modify_number = int(input("What Is The Account Number"))
-    accountIndex = self.find_account(modify_number)
-    if(accountIndex):
-      account = self.accounts[accountIndex]
+    account = self.find_account(modify_number)
+    if(account):
       account.modify_an_account()
     else:
       print("Invalid Account Number!")
@@ -103,8 +109,9 @@ class Bank:
     
 
   def close_an_account(self):
-    print("Closing account ", self.number )
-    print("Hi")
+    ask = int(input("What Is Your Account Number"))
+    if
+    print("Closing account ", self.number)
     pass
 
   def withdraw(self):
@@ -120,9 +127,11 @@ class Bank:
   
 
   def find_account(self,accountNumber):
+    found_account = None
     for index, account in enumerate(self.accounts):
       if (account.number == accountNumber):
-        return index
+        found_account = account 
+    return found_account
     
 
 
