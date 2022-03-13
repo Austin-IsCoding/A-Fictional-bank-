@@ -84,12 +84,18 @@ class Bank:
     typeOfAcc = input("What Type Of Account Are You Making S/C: ")
     name = input("What Will Be The Name Of The Account: ")
     balance = float(input("What Will Be The Balance Of The Account: "))
-    number = int(input("What Will Be The Number Of Your Account: "))
     loop = True
     while loop:
-      find_account = self.find_account(accountNumber)
-      if find_account != None:
+      number = int(input("What Will Be The Number Of Your Account: "))
+      find_account = self.find_account(number)
+      if find_account == None:
         account = Account(typeOfAcc,name,balance,number)
+        self.accounts.append(account)
+        break
+      else:
+        print("Account Number Is Already Being Used")
+        
+        
         
          
         
@@ -109,8 +115,7 @@ class Bank:
     
 
   def close_an_account(self):
-    ask = int(input("What Is Your Account Number"))
-    if
+    # ask = int(input("What Is Your Account Number"))
     print("Closing account ", self.number)
     pass
 
