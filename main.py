@@ -104,6 +104,7 @@ class Bank:
 
   def close_an_account(self):
     print("Closing account ", self.number )
+    print("Hi")
     pass
 
   def withdraw(self):
